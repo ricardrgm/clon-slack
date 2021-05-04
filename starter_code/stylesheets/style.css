@@ -4,4 +4,50 @@ button-purple: #192592
 main-titles dark-grey: #2C303F;
 paragraph grey: #5b5e6d;
 nav grey: #5b5e6d;
+
+font-family: Slack-Circular-Pro, "Helvetica Neue", Helvetica, "Segoe UI", Tahoma, Arial, sans-serif
 */
+
+body{
+    display:flex;
+    flex-direction: column;
+    font-family: "Segoe UI",Tahoma, Arial, sans-serif;
+    
+}
+
+body nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100%;
+    padding: 0 2rem;
+}
+
+nav img{
+    width: auto;
+    height:50px;
+}
+nav .fa-bars{
+    display: flex;
+    align-items: center;
+}
+nav ul, nav .fa-times{
+    display: none;
+}
+
+header img{
+    width: 100%;
+}
+
+header p{
+    font-weight: 400;
+    line-height: 1.444;
+    letter-spacing: -.2px;
+    margin-top: 0;
+    font-size: 1rem;
+    margin-bottom: 1rem
+}
+main img{
+    width: 100%;
+              
+}
