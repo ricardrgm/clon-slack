@@ -92,7 +92,8 @@ header p:first-of-type{
 }
 
 header p:nth-of-type(2), main p{
-    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
     font-size: 1.2rem;
 }
 
@@ -109,7 +110,7 @@ button{
     margin-bottom: 1em;
 }
 
- header button{
+ header button, main button{
     
     border-color: #192592;
     background-color: #192592;
@@ -118,7 +119,7 @@ button{
            
  }
  
- header input{
+ header input , main input{
     width:100%; 
     height: 60px;
     padding: 1px 10px;
@@ -134,22 +135,24 @@ button{
     margin-bottom: 1em;
  }
 
-main div:nth-of-type(1) div:nth-child(1n), footer div:nth-child(2){
-    background-color:#F4F3F4;
+
+main { 
+    background-color:#F4F3F4; 
+ 
+}
+
+main section{
+    display: flex;
+    flex-wrap: wrap;
 }
 
 main img{
     width: 100%;
+    transform: scale(0.6);
+    
+    border-bottom: 0.5px solid #D3D3D3;
               
 }
-
-main button{
-    
-    border-color: #192592;
-    background-color: white;
-    color: #192592;
-        
- }
  main p:first-of-type{
     font-size: 1.2em;
     line-height: 150%;
@@ -158,6 +161,11 @@ main button{
      text-align: center;
      color: #5b5e6d;
  }
+
+ main h2 {
+     padding-top: 40px;
+ }
+
 
 
  main div:nth-of-type(1) div:nth-child(1n){
@@ -173,12 +181,11 @@ main button{
 
 
  footer div:nth-child(1){
-    display:flex;
+    display: flex;
     flex-wrap: wrap;
-   
     color: #5b5e6d;
-
-    background-color: greenyellow;
+    align-items: center;
+    justify-content: flex-start;
 }
  
 footer div:nth-child(1) li:first-child , main p:nth-child(1){
@@ -190,15 +197,15 @@ footer div:nth-child(1) li{
  }
 
  footer div:nth-child(2){
-    display:flex;
+    display: flex;
     flex-wrap: wrap;
     align-items: center;
-   
     color: #5b5e6d;
-    background-color:indigo;
+    background-color: #F4F3F4;
+    justify-content: space-between;
+    align-content: center;
  }
  footer div:nth-child(2) ul{
-    width: 100%;
     display: flex;
     justify-content: center;
      
@@ -211,40 +218,66 @@ footer div:nth-child(1) li{
  
     font-weight: bold;
  }
-
  footer div:nth-child(2) div{
-    width:100%;
-    justify-content: center;
-    background-color: greenyellow;
-
+     display: flex;
  }
-
+ 
 footer div:nth-child(1) img{
-    transform: scale(0.7);
+    max-width: 60%;
+    height: 50%;
+    transform: translate(-50px, -35px);
  }
  footer div:nth-child(2) img{
     width: 30px;;
     height: 30px;
+    padding-right: 15px;
 /*     transform: scale(0.2); */
 }
 
-footer .fas, footer .fab{
-    transform: scale(1.1);
-}
- 
+
+
 @media (min-width: 767px) and (max-width: 961px) {
 
     footer div:nth-child(2) div{
         background-color: brown;
     }
 
-     
+        
     header input{
         width:60%;
         margin-right: 20px;
     }
-    header button{
+
+    main input{
+        width:30%;
+     }
+
+    header button, main button{
         width:auto;
 
+    }
+
+    header p:nth-of-type(2), main p {
+        margin-left: 0px;
+        margin-right: 0px;
+        
+     }
+
+   
+    main div:nth-child(1) button:nth-of-type(1){
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    main section , main div:nth-child(2){ 
+        display: flex;
+        flex-flow: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+
+    }
+    main img{
+        width: 50%;
     }
 }
