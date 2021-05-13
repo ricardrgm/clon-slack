@@ -63,9 +63,10 @@ nav li:nth-of-type(4){
 }
 
 header{
-    display:flex;
+    
+    /* display:flex; */
    /*  justify-content: space-around; */
-    flex-flow: wrap;
+    /* flex-flow: wrap; */
 
 
     margin-bottom: 1em;
@@ -110,7 +111,7 @@ button{
     margin-bottom: 1em;
 }
 
- header button, main button{
+ header button, main div:nth-of-type(2) button{
     
     border-color: #192592;
     background-color: #192592;
@@ -118,6 +119,14 @@ button{
     color: white;
            
  }
+
+ main div:nth-of-type(1) button{
+    border-color: #192592;
+    background-color: white;
+       
+    color: #192592;
+ }
+
  
  header input , main input{
     width:100%; 
@@ -144,10 +153,16 @@ main {
 main section{
     display: flex;
     flex-wrap: wrap;
+
+    justify-content: center;
+    align-items: center;
+
 }
 
 main img{
     width: 100%;
+    max-width: 375px;
+    height: 6rem;
     transform: scale(0.6);
     
     border-bottom: 0.5px solid #D3D3D3;
@@ -184,7 +199,6 @@ main img{
     display: flex;
     flex-wrap: wrap;
     color: #5b5e6d;
-    align-items: center;
     justify-content: flex-start;
 }
  
@@ -205,6 +219,12 @@ footer div:nth-child(1) li{
     justify-content: space-between;
     align-content: center;
  }
+ footer div:nth-child(1) ul{
+    /* display: flex; */
+    width: 7rem;
+ }
+
+
  footer div:nth-child(2) ul{
     display: flex;
     justify-content: center;
@@ -236,11 +256,7 @@ footer div:nth-child(1) img{
 
 
 
-@media (min-width: 767px) and (max-width: 961px) {
-
-    footer div:nth-child(2) div{
-        background-color: brown;
-    }
+@media (min-width: 767px) and (max-width: 960px) {
 
         
     header input{
@@ -272,7 +288,7 @@ footer div:nth-child(1) img{
     main section , main div:nth-child(2){ 
         display: flex;
         flex-flow: wrap;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
         padding: 10px;
 
@@ -280,4 +296,128 @@ footer div:nth-child(1) img{
     main img{
         width: 50%;
     }
+   
+}
+/* Medium Screen (1024px > width > 960px) */
+@media (min-width: 961px) and (max-width: 1024px) {
+
+    header{
+    
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center
+    }
+    header div{
+        width: 50%;
+    }
+
+    header input{
+        width:60%;
+        margin-right: 20px;
+    }
+
+    main input{
+        width:30%;
+     }
+
+     
+    header button, main button{
+        width:auto;
+
+    }
+
+    header p:nth-of-type(2), main p {
+        margin-left: 0px;
+        margin-right: 0px;
+        
+     }
+
+   
+    main div:nth-child(1) button:nth-of-type(1){
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    main section , main div:nth-child(2){ 
+        display: flex;
+        flex-flow: wrap;
+        justify-content: space-around;
+        align-items: center;
+        padding: 10px;
+
+    }
+    main img{
+        width: 33%;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    nav .fa-bars{
+        display: none;
+    }
+    nav .fa-times{
+        display: none;
+    }
+    nav ul{
+        display: flex;
+             
+    
+    }
+
+    header{
+    
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center
+    }
+
+    header div{
+        width: 50%;
+    }
+
+
+    header input{
+        width:60%;
+        margin-right: 20px;
+    }
+
+    main input{
+        width:30%;
+     }
+
+    header button, main button{
+        width:auto;
+
+    }
+
+    header p:nth-of-type(2), main p {
+        margin-left: 0px;
+        margin-right: 0px;
+        
+     }
+
+   
+    main div:nth-child(1) button:nth-of-type(1){
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    main section , main div:nth-child(2){ 
+        display: flex;
+        flex-flow: wrap;
+        justify-content: space-around;
+        align-items: center;
+        padding: 10px;
+
+    }
+    main img{
+        width: 33%;
+    }
+
+    footer div:nth-child(1){
+       
+        justify-content: space-around;
+    }
+        
 }
